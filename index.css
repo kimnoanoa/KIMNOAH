@@ -93,13 +93,13 @@
     .exDiv{
       margin-top: 10px;
       width: 70%;
-      height: 400px;
+      height: 600px;
       background-color: rgb(238, 231, 131);
     }
    .eduDiv {
       margin-top: 10px;
       width: 70%;
-      height: 450px;
+      height: 400px;
       background-color: rgb(240, 133, 199);
       padding: 20px;
       border-radius: 10px;
@@ -159,16 +159,40 @@
       }
 
 
-    .projectsDiv{
+    .projectsDiv {
       margin-top: 5px;
       width: 70%;
-      height: 800px;
+      height: 600px;
       background-color: rgb(140, 249, 196); 
+      padding: 10px;
+      box-sizing: border-box;
     }
+
+    .projectContainer {
+      display: flex;                  /* ✅ 가로 정렬은 여기서 */
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      
+    }
+
+    .project {
+      flex: 1;
+      height:400px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+    }
+    .projectImg{
+      border-radius: 20px ;
+      background-color:#f0bcc2
+      
+    }
+
     .contactDiv{
       margin-top: 5px;
       width: 70%;
-      height: 400px;
+      height: 350px;
       background-color: rgb(243, 210, 134);
     }
 
@@ -232,6 +256,8 @@
       height: auto;
       margin-bottom: 6px;
     }
+
+    
 
 
     .contactInfo {
