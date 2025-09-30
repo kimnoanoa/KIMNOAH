@@ -8,6 +8,17 @@
 
 </head>
 <body>
+  <!-- HTML: 첫 섹션 바로 위에 넣기 -->
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#aboutMe">About Me</a></li>
+      <li><a href="#skill">Skill</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
   <section class="page reveal custom-bg-section">
     <img src="./image/background03.jpg" alt="BackgroundImage">
    <div class="overlay"></div>
@@ -32,7 +43,7 @@
       </div>
     </div>
   </div>
- <div class="skillDiv">
+ <div class="skillDiv" id="skill">
   <h2 class="subTitle">SKILL</h2>
   <div class="skillGrid">
     <!-- 왼쪽 위 - Frontend -->
@@ -92,7 +103,7 @@
   </section>
 
   <section class="page reveal reveal-left">
-  <div class="exDiv">
+  <div class="exDiv" id="experience">
   <h2 class="subTitle">EXPERIENCE</h2>
   <div class="experienceList">
     <div class="experienceItem">
@@ -136,7 +147,7 @@
     </div>
 
     <!-- 오른쪽: 자격증 -->
-   <div class="certificationSection">
+   <div class="certificationSection" >
       <h3>CERTIFICATION 📝</h3>
       <ul class="certList">
         <li><span class="certName">정보처리기사</span><span class="certDate">2025.11</span></li>
@@ -152,7 +163,7 @@
 
   </section>
   <section class="page reveal reveal-left">
-    <div class="projectsDiv">
+    <div class="projectsDiv" id="projects">
   <h2 class="subTitle">PROJECTS</h2>
   <div class="projectSliderWrapper">
     <button class="slideBtn prevBtn" style="display:none;">◀</button>
@@ -289,7 +300,7 @@
   </div>
 </div> -->
 
- <div class="contactDiv">
+ <div class="contactDiv" id="contact">
   <h2 class="subTitle">CONTACT</h2>
   <div class="contactInfo">
 
