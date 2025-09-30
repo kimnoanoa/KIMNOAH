@@ -39,6 +39,48 @@ topBtn.addEventListener("click", () => {
   topBtn.style.display = "none";
 });
 
+  const container = document.querySelector('.projectContainer');
+  const projects = document.querySelectorAll('.project');
+  const prevBtn = document.querySelector('.prevBtn');
+  const nextBtn = document.querySelector('.nextBtn');
+
+  const visibleCount = 4;  // 한번에 보여줄 아이템 수
+  const totalCount = projects.length;
+
+  let currentIndex = 0;
+
+  function updateButtons() {
+    prevBtn.style.display = currentIndex > 0 ? 'block' : 'none';
+    nextBtn.style.display = currentIndex < totalCount - visibleCount ? 'block' : 'none';
+  }
+
+  function slide() {
+    const slideWidth = projects[0].offsetWidth + 10; // 아이템 너비 + gap
+    container.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    updateButtons();
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      slide();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalCount - visibleCount) {
+      currentIndex++;
+      slide();
+    }
+  });
+
+  // 초기 세팅: 프로젝트 4개 이하면 버튼 숨김, 초과면 버튼 보임
+  if (totalCount > visibleCount) {
+    updateButtons();
+  } else {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  }
 
 
 
