@@ -29,7 +29,7 @@ window.addEventListener('wheel', (e) => {
   // 스크롤 딜레이
   setTimeout(() => {
     isScrolling = false;
-  }, 1000);
+  }, 500);
 });
 
 // Top 버튼 클릭 시 맨 위로
