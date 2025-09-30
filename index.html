@@ -8,26 +8,24 @@
 
 </head>
 <body>
+  <section class="page reveal custom-bg-section">
+    <img src="./image/background03.jpg" alt="BackgroundImage">
+   <div class="overlay"></div>
 
-  <section class="page">
-    <!-- <h2 class="title">김노아</h2> -->
+  <div class="content">
+    <h1 class="animatedText">안녕하세요! 신입 개발자 김노아입니다.</h1>
+    <button id="scrollBtn">포트폴리오 보러 가기</button>
+  </div>
+  </section>
+  <section class="page reveal reveal-right">
 
-    <!-- <nav class="nav">
-      <a href="../DAY_0701/15_onchange.html">HOME</a>
-      <a href="../DAY_0701/14_slide.html">ABOUT ME</a>
-      <a href="../DAY_0701/17_baduk.html">SKILL</a>
-      <a href="../DAY_0701/17_baduk.html">Experience</a>
-      <a href="../DAY_0701/17_baduk.html">Education / Certification</a>
-      <a href="../DAY_0701/17_baduk.html">Projects</a>
-    </nav> -->
-
-    <div class="myImgDiv">
+    <div class="myImgDiv" id="aboutMe">
     <h2 class="subTitle">ABOUT ME</h2>
 
     <div class="imgAndDesc">
-      <img class="myImg" src="./image/다운로드.jpg" alt="이미지입니당." >
+      <img class="myImg" src="./image//noa.jpg" alt="이미지입니당." >
       <div class="description">
-        <p>You knew that I was no good for you</p>
+        <p>안녕하세요! <b>김노아</b> 입니다! </p>
         <p>when we lay down after doing that things you loved</p>
         <p>you knew that I wasn't better than you</p>
         <p>I hope that I could be seemed really fine with you leaving</p>
@@ -93,18 +91,33 @@
 
   </section>
 
-  <section class="page">
+  <section class="page reveal reveal-left">
   <div class="exDiv">
-      <h2 class="subTitle">Experience</h2>
+  <h2 class="subTitle">EXPERIENCE</h2>
+  <div class="experienceList">
+    <div class="experienceItem">
+      <div class="expTopRow">
+        <div class="expTitle">회사명 또는 프로젝트</div>
+        <div class="expDate">2023.01 ~ 2023.12</div>
+      </div>
+      <div class="expRole">역할 및 간단 설명</div>
+      <div class="expTags">
+        <span>#React</span>
+        <span>#Team</span>
+      </div>
+    </div>
 
+    <!-- 필요한 만큼 추가 -->
   </div>
+  </div>
+
   <div class="eduDiv">
-  <h2 class="subTitle">Education / Certification</h2>
+  <h2 class="subTitle">EDUCATION / CERTIFICATION</h2>
 
   <div class="eduCertContainer">
     <!-- 왼쪽: 학력 -->
     <div class="educationSection">
-      <h3>Education 🎓</h3>
+      <h3>EDUCATION 🎓</h3>
       <ul>
         <li>
         <strong>교육명:</strong> Java & Python 빅데이터 분석 활용 AI플랫폼 개발<br>
@@ -124,7 +137,7 @@
 
     <!-- 오른쪽: 자격증 -->
    <div class="certificationSection">
-      <h3>Certification 📝</h3>
+      <h3>CERTIFICATION 📝</h3>
       <ul class="certList">
         <li><span class="certName">정보처리기사</span><span class="certDate">2025.11</span></li>
         <li><span class="certName">정보처리산업기사</span><span class="certDate">2025.11</span></li>
@@ -138,37 +151,13 @@
 </div>
 
   </section>
-  <section class="page">
+  <section class="page reveal reveal-left">
     <div class="projectsDiv">
-  <h2 class="subTitle">projects</h2>
+  <h2 class="subTitle">PROJECTS</h2>
   <div class="projectSliderWrapper">
     <button class="slideBtn prevBtn" style="display:none;">◀</button>
     <div class="projectContainer">
-      <!-- project div들 -->
-       <!-- <div class="project">
-       <a href="">
-      <img class="projectImg" src="./image/image01.jpg" height="200px" width="100%">
-      </a>
-      <div class="projectExplDiv">
-        <p>sdasdasd</p>
-      </div>
-     </div>
-      <div class="project">
-       <a href="">
-      <img class="projectImg" src="./image/image02.jpg" height="200px" width="100%">
-      </a>
-      <div class="projectExplDiv">
-        <p>sdasdasd</p>
-      </div>
-    </div>
-     <div class="project">
-       <a href="">
-      <img class="projectImg" src="./image/image03.jpg" height="200px" width="100%">
-      </a>
-      <div class="projectExplDiv">
-        <p>sdasdasd</p>
-      </div>
-    </div> -->
+      
      <div class="project">
        <a href="" target="_blank">
       <img class="projectImg" src="./image/project01.png" height="200px" width="100%">
@@ -300,16 +289,37 @@
   </div>
 </div> -->
 
-  <div class="contactDiv">
-    <h2 class="subTitle">Contact</h2>
-    <div class="contactInfo">
-      <div><span>Phone 📞</span> 010-1234-5678</div>
-      <div><span>E-mail 💌</span>     no123123120@naver.com </div>
-      <div><span>GitHub 🐙</span> <a href="https://github.com/username" target="_blank">kimno12312312312a</a></div>
-      <div><span>Blog ✍️</span> <a href="https://blog.example.com" target="_blank"> Blog</a></div>
-      <div><a href="./resume.pdf" download class="downloadBtn"> 📄 이력서 다운로드</a></div>
+ <div class="contactDiv">
+  <h2 class="subTitle">CONTACT</h2>
+  <div class="contactInfo">
+
+    <div class="contactCard">
+      <span class="contactLabel">📱 Phone</span>
+      <span class="contactValue">010-1234-5678</span>
     </div>
+
+    <div class="contactCard">
+      <span class="contactLabel">📧 Email</span>
+      <span class="contactValue">no123123120@naver.com</span>
+    </div>
+
+    <div class="contactCard">
+      <span class="contactLabel">🐙 GitHub</span>
+      <a class="contactValue" href="https://github.com/username" target="_blank">kimno12312312312a</a>
+    </div>
+
+    <div class="contactCard">
+      <span class="contactLabel">✍️ Blog</span>
+      <a class="contactValue" href="https://blog.example.com" target="_blank">Visit Blog</a>
+    </div>
+
+    <div class="resumeDownloadWrapper">
+      <a href="./resume.pdf" download class="downloadBtn">📄 이력서 다운로드</a>
+    </div>
+
   </div>
+</div>
+
 
 
   </section>

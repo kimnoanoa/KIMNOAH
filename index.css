@@ -5,23 +5,141 @@
         font-style: normal;
         }
 
+@font-face {
+    font-family: 'RixInuaridurine';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TtTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
     body, html {
       font-family:'S-CoreDream-3Light';
       margin: 0;
       padding: 0;
       height: 100%;
+      background-color: #efeded;
+      /* scroll-snap-type: y mandatory;
+      scroll-behavior: auto; */
       overflow: hidden;
+      /* overflow-y: scroll; ✅ 반드시 있어야 함 */
+      /* scroll-padding-top: 0px; */
     }
 
     .page {
-      height: 100vh;
+      height: 100vh; /* ✅ 화면 전체 높이 */
+      scroll-snap-align: start; /* ✅ 딱 화면에 맞추기 */
+      overflow: hidden;
       display: flex;
-      flex-direction: column; /* ✅ 세로로 배치 */
+      flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       padding: 40px;
       box-sizing: border-box;
+      }
+
+    .custom-bg-section {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
     }
+
+    .custom-bg-section img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      z-index: -2;
+    }
+
+    .custom-bg-section .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: -1;
+    }
+
+    .custom-bg-section .content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .animatedText {
+      font-size: 3rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 1.5s forwards;
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #scrollBtn {
+      margin-top: 30px;
+      font-family: 'S-CoreDream-3Light';
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #e88893;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #scrollBtn:hover {
+      background-color: #d0666b;
+    }
+
+    /* 공통 reveal 효과 */
+    .reveal {
+      opacity: 0;
+      transition: opacity 1s ease, transform 1s ease;
+      will-change: transform, opacity;
+    }
+
+    /* 방향별 시작 위치 */
+    .reveal-left {
+      transform: translateX(-40px); /* 너무 멀지 않게 */
+    }
+
+    .reveal-right {
+      transform: translateX(40px);
+    }
+    .reveal-bottom {
+      transform: translateY(50px); /* 아래에서 위로 등장 */
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+
+    /* 보일 때 활성화 상태 */
+    .reveal.active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
 
     .title {
       font-size: 2.5rem;
@@ -57,8 +175,11 @@
     }
 
     .subTitle {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      border-bottom: 2px solid rgb(151, 150, 150);
+      padding-bottom: 5px;
       display: block;
+      font-family: 'TtTogether';
       text-align: center;  
       justify-content: center;     /* 텍스트도 왼쪽 정렬 */
       /* align-self: flex-start; */ 
@@ -73,8 +194,8 @@
     }
 
     .myImg {
-      width: 150px;
-      height: 200px;
+      width: 250px;
+      height: 300px;
       margin-left: 150px;
       background-color: white;
     }
@@ -90,17 +211,73 @@
     .description>p{
       margin: 5px;
     }
-    .exDiv{
-      margin-top: 10px;
+    .exDiv {
+      padding: 20px;
       width: 70%;
-      height: 600px;
-      background-color: rgb(238, 231, 131);
+      height: 400px;
     }
+    .experienceList {
+      height: 400px;
+      overflow-y: auto;
+      padding-right: 10px; /* 스크롤바 공간 확보 */
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .experienceItem {
+      padding: 0;               /* 박스 패딩 제거 */
+      background: none;         /* 배경 없애기 */
+      box-shadow: none;         /* 그림자 제거 */
+      border-radius: 0;         /* 둥근 모서리 제거 */
+      cursor: pointer;          /* 마우스 올리면 커서 포인터 */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      color: #333;
+      border-bottom: 1px solid #ddd; /* 각 항목 구분선 */
+      padding-bottom: 10px;
+    }
+
+    .experienceItem:hover {
+      background-color: #f0f0f0; /* 호버시 살짝 배경색 변화 */
+      transform: none;
+      box-shadow: none;
+    }
+
+    .expTopRow {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex: 1;
+    }
+
+    .expTitle {
+      font-weight: 600;
+      margin-left: 30px;
+    }
+
+    .expDate {
+      color: #888;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    .expRole,
+    .expTags {
+      display: none; /* 숨기기: 역할과 태그는 안보이게 */
+    }
+
+
+
+  
+
    .eduDiv {
       margin-top: 10px;
       width: 70%;
       height: 400px;
-      background-color: rgb(240, 133, 199);
+      /* background-color: rgb(240, 133, 199); */
       padding: 20px;
       border-radius: 10px;
       box-sizing: border-box;
@@ -222,7 +399,7 @@
 
     .projectExplDiv {
       padding: 15px;
-      font-family: 'Segoe UI', sans-serif;
+      /* font-family: 'Segoe UI', sans-serif; */
       font-size: 14px;
       color: #333;
       /* background-color: #f9f9f9; */
@@ -249,13 +426,6 @@
 
 
 
-
-    .contactDiv{
-      margin-top: 5px;
-      width: 70%;
-      height: 350px;
-      background-color: rgb(243, 210, 134);
-    }
 
     .skillDiv {
       width: 70%;
@@ -321,38 +491,78 @@
     
 
 
+   .contactDiv {
+      margin-top: 5px;
+      width: 70%;
+      height: 350px;
+      /* border: 1px solid rgb(114, 114, 240); */
+      padding: 20px 20px;
+      /* background-color: #f9f9ff; */
+      border-top: 1px solid #ddd;
+    }
+
+    .contactDiv .subTitle {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
     .contactInfo {
       display: flex;
-      gap: 8px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       flex-wrap: wrap;
-      font-size: 15px;
-    }
-    .contactInfo div {
-      display: flex;
-      width: 100%;
-     align-items: center;
       justify-content: center;
-      text-align: center; 
-      gap: 5px;
+      gap: 20px;
     }
-    .contactInfo a {
+
+    .contactCard {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 20px 25px;
+      min-width: 150px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contactCard:hover {
+      transform: translateY(-5px);
+    }
+
+    .contactLabel {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
       color: #333;
+    }
+
+    .contactValue {
+      font-size: 15px;
+      color: #555;
+      word-break: break-all;
+    }
+
+    .contactCard a.contactValue {
+      color: #4a3aff;
       text-decoration: none;
     }
-    .contactInfo a:hover {
+
+    .contactCard a.contactValue:hover {
       text-decoration: underline;
     }
 
+    /* Resume button */
+    .resumeDownloadWrapper {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
     .downloadBtn {
-      margin-top:30px;
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 24px;
       background-color: #9586fa;
       color: white;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
@@ -361,11 +571,12 @@
 
     .downloadBtn:hover {
       background-color: #5941a9;
-      color: rgb(255, 255, 255);
     }
+
     
 
     #topBtn {
+      font-family: 'S-CoreDream-3Light';
       position: fixed;
       bottom: 40px;
       right: 40px;

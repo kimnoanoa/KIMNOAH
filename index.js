@@ -82,8 +82,33 @@ topBtn.addEventListener("click", () => {
     nextBtn.style.display = 'none';
   }
 
+  // index.js 또는 <script> 안에 추가
 
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
 
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // 한 번만 애니메이션
+          }
+        });
+      }, {
+        threshold: 0.1 // 보이기 시작하면 발동
+      });
+
+      reveals.forEach(el => observer.observe(el));
+    });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.getElementById("scrollBtn");
+  const aboutMe = document.getElementById("aboutMe");
+
+  scrollBtn.addEventListener("click", () => {
+    aboutMe.scrollIntoView({ behavior: "auto" });
+  });
+});
 
 
 
