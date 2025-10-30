@@ -12,8 +12,8 @@
     <ul>
       <li><a href="#aboutMe">About Me</a></li>
       <li><a href="#skill">Skill</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -22,7 +22,7 @@
    <div class="overlay"></div>
 
   <div class="content">
-    <h1 class="animatedText">안녕하세요! 신입 개발자 김노아입니다.</h1>
+    <h1 class="animatedText">새로운 도전을 두려워하지 않는 개발자 김노아입니다.</h1>
     <button id="scrollBtn">포트폴리오 보러 가기</button>
   </div>
   </section>
@@ -31,20 +31,28 @@
     <div class="myImgDiv" id="aboutMe">
     <h2 class="subTitle">ABOUT ME</h2>
 
-    <div class="imgAndDesc">
-      <img class="myImg" src="./image//noa.jpg" alt="이미지입니당." >
-      <div class="description">
-        <p>안녕하세요! <b>김노아</b> 입니다! </p>
-        <p>when we lay down after doing that things you loved</p>
-        <p>you knew that I wasn't better than you</p>
-        <p></p>
-        <a href="https://github.com/username" target="_blank"><p style="margin-top: 30px;"><img src="./image/github.png" height="30px" width="30px" margin-top="10px" margin-left="10px" margin-right="50px" alt="">github</p></a>
-      </div>
-      <div class="description02">
-      
-      </div>
+  <div class="imgAndDesc">
+  <img class="myImg" src="./image/noa.jpg" alt="이미지입니당.">
+  
+  <div class="description">
+    <p>안녕하세요! 도전을 즐기며 끊임없이 성장하는 개발자 <b>김노아</b> 입니다!</p>
+    <br>
+    <p>작은 불편함도 기술로 해결하며 누군가의 하루를 더 편하게 만들고 싶습니다.</p>
+    <p>실패를 두려워하지 않고 끊임없이 배우며 성장하는 개발자가 되겠습니다.</p>
+
+    <a href="https://github.com/kimnoanoa" target="_blank" class="github-link">
+      <img src="./image/github.png" height="25" width="25" alt="GitHub">
+      github.com/kimnoanoa
+    </a>
+
+    <div class="description02">
+      <span class="badge">국가평생교육진흥원 아동학 학사</span>
+      <span class="badge">ADSP</span>
     </div>
   </div>
+</div>
+
+
 
  <div class="skillDiv" id="skill">
   <h2 class="subTitle">SKILL</h2>
@@ -111,122 +119,115 @@
     <button class="slideBtn prevBtn" style="display:none;">◀</button>
     <div class="projectContainer">
       
-     <div class="project">
-       <a href="" target="_blank" class="projectImgWrapper">
-      <img class="projectImg" src="./image/project01.png" height="200px" width="100%">
-       <div class="imgOverlay">
-            <span class="overlayText">자세히 보러가기</span>
-          </div>
-      </a>
-      <div class="projectExplDiv">
-      <p class="projectTitle">방탈출카페 예약 사이트</p>
-      <div class="projectInfo">
-        <div><strong>기간 :</strong> 2024.05 ~ (현재 유지보수중) </div>
-        <div><strong>인원 :</strong> 4명</div>
-        <div><strong>사용 기술 :</strong> HTML, CSS, JavaScript, Spring Boot, MySQL, REST API, Thymeleaf </div>
-        <div><strong>상태 :</strong> 배포 준비중</div>
+  <div class="project">
+  <a href="https://riot-tft-chatbot.onrender.com/chatbot" target="_blank" class="projectImgWrapper">
+    <img class="projectImg" src="./image/chatbot.png">
+    <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+  </a>
+  <div class="projectExplDiv">
+    <p class="projectTitle">롤토체스 챗봇 웹사이트</p>
+    <div class="projectInfo">
+      <div><strong>기간 :</strong> 2025.10.13 ~ 2025.10.24</div>
+      <div><strong>인원 :</strong> 4명</div>
+      <div><strong>사용 기술 :</strong> HTML, CSS, JS, Python, Flask, Riot API, OPENAI API</div>
+      
+      <div class="projectDetail">
+        <p><strong>내 역할 :</strong> Python Flask 서버 구축, OpenAI API 연동, Riot API 데이터 처리 및 챗봇 UI 설계</p>
+        <p>시너지 예측 시뮬레이션 기능과 UI 설계 및 배포</p>
+        <p><strong>주요 기능 :</strong> RIOT API 를 이용한 유저 전적 검색, 시너지 예측 시뮬레이터, 챗봇 기반 팀 구성 추천</p>
       </div>
+      <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
     </div>
-    </div>
-    <div class="project">
-       <a href="https://riot-tft-chatbot.onrender.com/chatbot" target="_blank" class="projectImgWrapper">
-      <img class="projectImg" src="./image/chatbot.png" >
-       <div class="imgOverlay">
-            <span class="overlayText">자세히 보러가기</span>
-          </div>
-      </a>
-      <div class="projectExplDiv">
-      <p class="projectTitle">롤토체스 챗봇 웹사이트</p>
-      <div class="projectInfo">
-        <div><strong>기간 :</strong> 2025.10.13 ~ 2025.10.24 (유지보수중) </div>
-        <div><strong>인원 :</strong> 4명</div>
-        <div><strong>사용 기술 :</strong> HTML, CSS, JS , Python, Flask, Riot API , OPENAI API </div>
-        <div><strong>상태 :</strong> 배포 완료</div>
-      </div>
-    </div>
-    </div>
-       <div class="project">
-       <a href="https://myfirstboard-f6q2.onrender.com/" target="_blank" class="projectImgWrapper">
-      <img class="projectImg" src="./image/image01.jpg" height="200px" width="100%">
-       <div class="imgOverlay">
-            <span class="overlayText">자세히 보러가기</span>
-          </div>
-      </a>
-      <div class="projectExplDiv">
-      <p class="projectTitle">게시판 웹 사이트</p>
-      <div class="projectInfo">
-        <div><strong>기간 :</strong> 2025.07 ~ (현재 유지보수중) </div>
-        <div><strong>인원 :</strong> 1명</div>
-        <div><strong>사용 기술 :</strong> HTML, CSS, JavaScript, Spring Boot, MySQL, Google API </div>
-        <div><strong>상태 :</strong> 배포 완료</div>
-      </div>
-    </div>
-    </div>
-    
-    <div class="project">
-       <a href="https://kimnoanoa.github.io/Burger-chicken/" target="_blank" class="projectImgWrapper">
-      <img class="projectImg" src="./image/burgerchicken.png" >
-       <div class="imgOverlay">
-            <span class="overlayText">자세히 보러가기</span>
-          </div>
-      </a>
-      <div class="projectExplDiv">
-      <p class="projectTitle">Burger&Chicken HTML 웹사이트</p>
-      <div class="projectInfo">
-        <div><strong>기간 :</strong> 2025.06 </div>
-        <div><strong>인원 :</strong> 1명</div>
-        <div><strong>사용 기술 :</strong> HTML, CSS, JS</div>
-        <div><strong>상태 :</strong> 배포 완료</div>
-      </div>
-    </div>
-    </div>
+  </div>
+</div>
 
-     <div class="project">
-       <a href="https://kimnoanoa.github.io/HtmlProject01/" target="_blank" class="projectImgWrapper">
-      <img class="projectImg" src="./image/firsthtmlproject02.png">
-       <div class="imgOverlay">
-            <span class="overlayText">자세히 보러가기</span>
-          </div>
-      </a>
-      <div class="projectExplDiv">
-      <p class="projectTitle">이개멍냥 펫샵 HTML 웹사이트</p>
-      <div class="projectInfo">
-        <div><strong>기간 :</strong> 2024.02 </div>
-        <div><strong>인원 :</strong> 4명</div>
-        <div><strong>사용 기술 :</strong> HTML, CSS, JS</div>
-        <div><strong>상태 :</strong> 배포 완료</div>
+<div class="project">
+  <a href="#" class="projectImgWrapper">
+    <img class="projectImg" src="./image/project01.png">
+    <div class="imgOverlay"><span class="overlayText">배포 준비 중</span></div>
+  </a>
+  <div class="projectExplDiv">
+    <p class="projectTitle">방탈출카페 예약 사이트</p>
+    <div class="projectInfo">
+      <div><strong>기간 :</strong> 2024.05 ~ (현재 문제 해결 중)</div>
+      <div><strong>인원 :</strong> 4명</div>
+      <div><strong>사용 기술 :</strong> Spring Boot, Java, MySQL ,HTML, CSS, JavaScript, REST API, KAKAO API , Naver API, Google API Thymeleaf</div>
+      
+      <div class="projectDetail">
+        <p><strong>내 역할 :</strong> 백엔드(Spring Boot) 예약 로직 구현 및 DB 설계</p>
+        <p>전반적인 프론트엔드 UI,UX 설계와 반응형 웹 구현</p>
+        <p><strong>주요 기능 :</strong> 테마별 예약, 관리자 승인, 결제 시스템, 예약 현황 조회 기능 , 게시판 기능</p>
+        <p><strong>해결 중 :</strong> 카카오,네이버,구글 소셜로그인 연동이 되지 않아 문제 해결 중.</p>
       </div>
+      <div class="projectStatus"><span class="status-badge pending">배포 준비중</span></div>
     </div>
-    </div>
-  
-     <div class="project">
-       <a href="">
-      <img class="projectImg" src="./image/project01.png" height="200px" width="100%">
-      </a>
-      <div class="projectExplDiv">
-      <p class="projectTitle">방탈출카페 예약 사이트</p>
-      <div class="projectInfo">
-        <div><strong>기간 :</strong> 2024.05 ~ (현재 유지보수중) </div>
-        <div><strong>인원 :</strong> 4명</div>
-        <div><strong>사용 기술 :</strong> HTML, CSS, JavaScript, Spring Boot, MySQL, REST API, Thymeleaf </div>
-        <div><strong>상태 :</strong> 배포 완료</div>
+  </div>
+</div>
+
+<div class="project">
+  <a href="https://myfirstboard-f6q2.onrender.com/" target="_blank" class="projectImgWrapper">
+    <img class="projectImg" src="./image/image01.jpg">
+    <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+  </a>
+  <div class="projectExplDiv">
+    <p class="projectTitle">게시판 웹사이트</p>
+    <div class="projectInfo">
+      <div><strong>기간 :</strong> 2025.07 ~</div>
+      <div><strong>인원 :</strong> 1명</div>
+      <div><strong>사용 기술 :</strong> Spring Boot, Java, HTML, CSS, JavaScript, MySQL, Google API</div>
+      
+      <div class="projectDetail">
+        <p><strong>내 역할 :</strong> 백엔드(Spring Boot) CRUD 기능 구현 및 DB 설계</p>
+        <p><strong>주요 기능 :</strong> 회원가입 / 로그인, 게시글 등록 / 수정 / 삭제, Google 로그인 연동</p>
       </div>
+      <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
     </div>
-    </div>
-     <div class="project">
-       <a href="">
-      <img class="projectImg" src="./image/project01.png" height="200px" width="100%">
-      </a>
-      <div class="projectExplDiv">
-      <p class="projectTitle">방탈출카페 예약 사이트</p>
-      <div class="projectInfo">
-        <div><strong>기간 :</strong> 2024.05 ~ (현재 유지보수중) </div>
-        <div><strong>인원 :</strong> 4명</div>
-        <div><strong>사용 기술 :</strong> HTML, CSS, JavaScript, Spring Boot, MySQL, REST API, Thymeleaf </div>
-        <div><strong>상태 :</strong> 배포 완료</div>
+  </div>
+</div>
+
+<div class="project">
+  <a href="https://kimnoanoa.github.io/Burger-chicken/" target="_blank" class="projectImgWrapper">
+    <img class="projectImg" src="./image/burgerchicken.png">
+    <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+  </a>
+  <div class="projectExplDiv">
+    <p class="projectTitle">Burger&Chicken HTML 웹사이트</p>
+    <div class="projectInfo">
+      <div><strong>기간 :</strong> 2025.06</div>
+      <div><strong>인원 :</strong> 1명</div>
+      <div><strong>사용 기술 :</strong> HTML, CSS, JS</div>
+      
+      <div class="projectDetail">
+        <p><strong>내 역할 :</strong> 전체 퍼블리싱 및 반응형 웹 구현</p>
+        <p><strong>주요 기능 :</strong> 메뉴 카테고리, 슬라이드 배너  UI 구현</p>
       </div>
+      <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
     </div>
+  </div>
+</div>
+
+<div class="project">
+  <a href="https://kimnoanoa.github.io/HtmlProject01/" target="_blank" class="projectImgWrapper">
+    <img class="projectImg" src="./image/firsthtmlproject02.png">
+    <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+  </a>
+  <div class="projectExplDiv">
+    <p class="projectTitle">이개멍냥 펫샵 HTML 웹사이트</p>
+    <div class="projectInfo">
+      <div><strong>기간 :</strong> 2024.02</div>
+      <div><strong>인원 :</strong> 4명</div>
+      <div><strong>사용 기술 :</strong> HTML, CSS, JS</div>
+      
+      <div class="projectDetail">
+        <p><strong>내 역할 :</strong> 상세 페이지 구현</p>
+        <p><strong>주요 기능 :</strong> 메인 페이지, 상세 페이지, 로그인 화면</p>
+      </div>
+      <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
     </div>
+  </div>
+</div>
+
+
     
       <!-- 추가 project들 -->
     </div>
@@ -237,37 +238,11 @@
   
   </div>
   </div>
-  <div class="eduDiv">
-  <h2 class="subTitle">EDUCATION</h2>
-
-  <div class="eduCertContainer">
-    <!-- 왼쪽 교육 박스 -->
-    <div class="educationBox">
-      <h3>교육사항 🎓</h3>
-      <p><strong>교육명:</strong> Java & Python 빅데이터 분석 활용 AI플랫폼 개발</p>
-      <p><strong>기관:</strong> 코리아IT아카데미 인천점</p>
-      <p><strong>기간:</strong> 2025.06 ~ 2025.12</p>
-      <p><strong>상태:</strong> 재학</p>
-    </div>
-
-    <!-- 오른쪽 교육 박스 -->
-    <div class="educationBox">
-      <h3>교육사항 🎓</h3>
-      <p><strong>교육명:</strong> 빅데이터 웹 플랫폼 풀스택 개발</p>
-      <p><strong>기관:</strong> 이젠아카데미 인천점</p>
-      <p><strong>기간:</strong> 2023.12 ~ 2024.06</p>
-      <p><strong>상태:</strong> 수료</p>
-    </div>
-  </div>
-</div>
-
-
-
  
 
   </section>
   <section class="page reveal reveal-left">
-  <div class="eduDiv">
+  <div class="eduDiv" id="education">
   <h2 class="subTitle">EDUCATION</h2>
 
   <div class="eduCertContainer">
@@ -297,26 +272,26 @@
 
     <div class="contactCard">
       <span class="contactLabel">📱 Phone</span>
-      <span class="contactValue">010-1234-5678</span>
+      <span class="contactValue">010-4557-7641</span>
     </div>
 
     <div class="contactCard">
       <span class="contactLabel">📧 Email</span>
-      <span class="contactValue">no123123120@naver.com</span>
+      <span class="contactValue">noamom00@naver.com</span>
     </div>
 
     <div class="contactCard">
       <span class="contactLabel">🐙 GitHub</span>
-      <a class="contactValue" href="https://github.com/username" target="_blank">kimno12312312312a</a>
+      <a class="contactValue" href="https://github.com/kimnoanoa" target="_blank">kimnoanoa</a>
     </div>
 
-    <div class="contactCard">
+    <!-- <div class="contactCard">
       <span class="contactLabel">✍️ Blog</span>
       <a class="contactValue" href="https://blog.example.com" target="_blank">Visit Blog</a>
-    </div>
+    </div> -->
 
     <div class="resumeDownloadWrapper">
-      <a href="./resume.pdf" download class="downloadBtn">📄 이력서 다운로드</a>
+      <a href="./김노아__입사지원서.docx" download class="downloadBtn">📄 이력서 다운로드</a>
     </div>
 
   </div>
