@@ -862,7 +862,7 @@ nav.nav a {
 
 .learnBtn:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  background: linear-gradient(135deg, #a31af1, #56017e);
 }
 
 .learnBtn:active {
