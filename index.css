@@ -399,7 +399,7 @@ nav.nav a {
   min-width: calc((100% - 30px) / 4);
   /* 4개 보여주기 */
   /* 기존 스타일 유지 */
-  height: 730px;
+  height: 780px;
   width: 280px;
   background-color: white;
   border: 1px solid #ccc;
@@ -440,34 +440,26 @@ nav.nav a {
 }
 
 
-/* 🎯 배포 상태 뱃지 - 하단 고정 */
+/* 🔹 뱃지 */
 .status-badge {
-  position: absolute;
-  bottom: 15px;
-  /* 🔹 카드 아래쪽에서 간격 */
-  left: 20%;
-  transform: translateX(-50%);
   display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 15px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
   font-weight: 600;
-  color: white;
-  user-select: none;
-  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
-/* 🔵 배포 완료 */
 .status-badge.deployed {
   background-color: #3b82f6;
 }
 
-/* 🟠 배포 준비중 */
 .status-badge.pending {
   background-color: #f59e0b;
 }
 
-/* ⚪ 유지보수중 */
 .status-badge.maintaining {
   background-color: #9ca3af;
 }
@@ -554,10 +546,15 @@ nav.nav a {
 }
 
 .projectTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
+  line-height: 1.4;
 }
+
 
 .projectInfo div {
   margin-bottom: 6px;
@@ -841,4 +838,88 @@ nav.nav a {
   color: #fff;
   transform: scale(1.05);
   box-shadow: 0 3px 6px rgba(59, 130, 246, 0.3);
+}
+
+
+
+/* 🔹 배운점 보기 버튼 (카드 하단 오른쪽 배치) */
+.learnBtn {
+  font-family: 'S-CoreDream-3Light';
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #9e66f8, #b5d0f0);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+.learnBtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.learnBtn:active {
+  transform: scale(0.97);
+}
+
+/* 🔹 모달창 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+/* 🔹 모달 내용 */
+.modal-content {
+  background: #fff;
+  white-space: pre-line; /* 줄바꿈 유지 */
+  line-height: 1.8;      /* 문장 간격 살짝 띄우기 */
+  color: #333;
+  margin: 8% auto;
+  padding: 30px 40px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 650px;
+  text-align: left;
+  line-height: 1.6;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.closeBtn {
+  float: right;
+  font-size: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.closeBtn:hover {
+  color: #1e293b;
+}
+
+/* 🔹 모달 등장 애니메이션 */
+@keyframes fadeIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }

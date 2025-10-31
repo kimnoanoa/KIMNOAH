@@ -110,206 +110,98 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const learnData = {
+  tft: `
+Flask 기반 서버를 직접 구축하면서 백엔드와 프론트엔드 간의 구조적인 연동 과정을 깊이 이해할 수 있었습니다.
+특히 Riot API와 OpenAI API를 동시에 연결하면서, 서로 다른 형태의 데이터 응답을 처리하고 통합하는 과정에서
+API 설계의 중요성과 데이터의 흐름을 체계적으로 배웠습니다.
+
+또한 챗봇 UI와 시너지 예측 시뮬레이션 기능을 설계하면서
+사용자 중심의 인터페이스 설계와 서버 로직 간의 상호작용을 고려하는 습관을 기르게 되었습니다.
+서버에서 전달되는 데이터를 실시간으로 화면에 반영하는 과정에서
+비동기 통신 구조와 JSON 데이터 처리 방식에 대한 이해가 한층 깊어졌습니다.
+
+마지막으로 프로젝트를 실제로 배포하면서
+환경 변수 관리(.env), API Key 보안, Render 서버 설정, 디버깅 및 배포 자동화 등의
+실무에 가까운 경험을 쌓을 수 있었습니다.
+이 과정을 통해 단순히 기능 구현이 아닌, 서비스를 완성도 있게 운영하는 개발자의 관점을 배우게 되었습니다.
+  `,
+
+  escape: `
+Spring Boot 기반의 서버를 설계하면서 백엔드 로직 구조화와 데이터베이스 설계의 중요성을 체계적으로 이해할 수 있었습니다.
+특히 예약 로직과 결제 시스템을 직접 구현하는 과정에서 트랜잭션 관리, 예외 처리, 서비스 계층 분리 등 안정적인 서비스 운영을 위한 설계 패턴을 익혔습니다.
+
+또한 Thymeleaf를 이용해 프론트엔드와 백엔드를 통합하며 MVC 구조의 흐름을 명확히 이해할 수 있었고,
+반응형 웹을 적용하면서 실제 사용자 환경에 맞는 UI·UX를 고려하는 능력을 기르게 되었습니다.
+
+외부 API(Kakao, Naver, Google) 연동 과정에서 OAuth 인증 구조와 REST 통신의 흐름을 직접 경험하며,
+API 요청·응답 구조와 보안 토큰 관리의 개념을 구체적으로 습득할 수 있었습니다.
+
+문제 해결 과정에서 단순히 기능 구현을 넘어서,
+서비스 품질을 유지하면서 확장 가능한 구조로 개선해 나가는 사고방식을 배우게 되었습니다.
+  `,
+
+  board: `
+Spring Boot 기반의 CRUD 기능을 처음부터 직접 구현하면서, 데이터베이스 설계와 API 흐름을 구체적으로 이해할 수 있었습니다.
+회원가입·로그인·게시글 등록과 같은 기능을 구현하며 MVC 패턴의 구조를 익히고, 백엔드 로직이 프론트엔드에 전달되는 과정을 체계적으로 경험했습니다.
+
+Google OAuth 로그인을 연동하면서 외부 인증 절차의 작동 원리와 API 요청·응답 구조를 배웠으며,
+토큰 기반 인증 방식의 개념을 이해하게 되었습니다.
+
+무엇보다 이 프로젝트는 개인적으로 '처음 배포까지 완료한 프로젝트'로,
+로컬 환경에서만 작동하던 서비스를 실제 서버에 배포하고 테스트하면서 배포 환경 설정, 종속성 관리, 버전 충돌 해결 등을 직접 겪을 수 있었습니다.
+
+이 과정을 통해 단순한 기능 구현을 넘어,
+‘사용 가능한 서비스’를 완성시키는 개발 프로세스 전반을 경험했고,
+서비스를 안정적으로 운영하기 위한 개발자의 책임감과 세부 설정의 중요성을 배우게 되었습니다.
+  `,
+
+  burger: `
+HTML, CSS, JavaScript를 활용해 웹페이지의 전체 구조를 직접 설계하며,
+프론트엔드 개발의 기본 원리를 체계적으로 익힐 수 있었습니다.
+
+메뉴 카테고리와 슬라이드 배너 UI를 구현하면서
+요소의 배치, 반응형 구조, 애니메이션 타이밍 등 세부적인 화면 구성의 중요성을 체감했습니다.
+특히 CSS Flex와 Grid의 차이를 이해하고,
+화면 크기에 따라 유연하게 변하는 레이아웃을 구현하며 시각적인 완성도를 높일 수 있었습니다.
+
+디자인과 사용성(UX)을 함께 고려하면서
+단순한 화면 구현이 아닌, 사용자가 자연스럽게 몰입할 수 있는 웹 환경을 만드는 방법을 배웠습니다.
+  `,
+
+  pet: `
+HTML, CSS, JavaScript를 이용해 처음으로 웹페이지를 직접 구현하면서,
+프론트엔드 개발의 기본 구조와 흐름을 몸으로 익힐 수 있었습니다.
+
+화면의 레이아웃을 구성하고 각 요소를 배치하는 과정에서
+시각적 완성도뿐 아니라 코드 구조의 일관성과 유지보수성의 중요성을 배웠습니다.
+특히 HTML의 계층 구조와 CSS 선택자, 위치 지정 속성(position, display 등)을 이해하며
+디자인과 기능이 결합되는 방식을 체감했습니다.
+
+또한 로그인 화면과 상세 페이지를 만들며 사용자 흐름을 고려한 화면 전환,
+요소 간 간격 조정, 시각적 계층 설계 등 UI의 기본기를 다질 수 있었습니다.
+
+이 프로젝트를 통해 ‘눈에 보이는 화면 뒤에는 논리적인 설계가 존재한다’는 점을 깨닫고,
+프론트엔드 개발자로서의 첫 걸음을 확실히 내딛을 수 있었습니다.
+  `
+};
+
+const modal = document.getElementById("learnModal");
+const modalText = document.getElementById("modalText");
+const closeBtn = document.querySelector(".closeBtn");
+
+document.querySelectorAll(".learnBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const key = btn.dataset.project;
+    modalText.textContent = learnData[key] || "배운 점이 아직 추가되지 않았습니다.";
+    modal.style.display = "block";
+  });
+});
+
+closeBtn.onclick = () => (modal.style.display = "none");
+window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
 
 
 
 
-
-// // 마우스 
-// // <![CDATA[
-// var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
-// var sparkles=50;
-
-// /****************************
-// *  Tinkerbell Magic Sparkle *
-// *(c)2005-13 mf2fm web-design*
-// *  http://www.mf2fm.com/rv  *
-// * DON'T EDIT BELOW THIS BOX *
-// ****************************/
-// var x=ox=400;
-// var y=oy=300;
-// var swide=800;
-// var shigh=600;
-// var sleft=sdown=0;
-// var tiny=new Array();
-// var star=new Array();
-// var starv=new Array();
-// var starx=new Array();
-// var stary=new Array();
-// var tinyx=new Array();
-// var tinyy=new Array();
-// var tinyv=new Array();
-
-// window.onload=function() { if (document.getElementById) {
-//   var i, rats, rlef, rdow;
-//   for (var i=0; i<sparkles; i++) {
-//     var rats=createDiv(3, 3);
-//     rats.style.visibility="hidden";
-//     rats.style.zIndex="999";
-//     document.body.appendChild(tiny[i]=rats);
-//     starv[i]=0;
-//     tinyv[i]=0;
-//     var rats=createDiv(5, 5);
-//     rats.style.backgroundColor="transparent";
-//     rats.style.visibility="hidden";
-//     rats.style.zIndex="999";
-//     var rlef=createDiv(1, 5);
-//     var rdow=createDiv(5, 1);
-//     rats.appendChild(rlef);
-//     rats.appendChild(rdow);
-//     rlef.style.top="2px";
-//     rlef.style.left="0px";
-//     rdow.style.top="0px";
-//     rdow.style.left="2px";
-//     document.body.appendChild(star[i]=rats);
-//   }
-//   set_width();
-//   sparkle();
-// }}
-
-// function sparkle() {
-//   var c;
-//   if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
-//     ox=x;
-//     oy=y;
-//     for (c=0; c<sparkles; c++) if (!starv[c]) {
-//       star[c].style.left=(starx[c]=x)+"px";
-//       star[c].style.top=(stary[c]=y+1)+"px";
-//       star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-//       star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
-//       star[c].style.visibility="visible";
-//       starv[c]=50;
-//       break;
-//     }
-//   }
-//   for (c=0; c<sparkles; c++) {
-//     if (starv[c]) update_star(c);
-//     if (tinyv[c]) update_tiny(c);
-//   }
-//   setTimeout("sparkle()", 40);
-// }
-
-// function update_star(i) {
-//   if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-//   if (starv[i]) {
-//     stary[i]+=1+Math.random()*3;
-//     starx[i]+=(i%5-2)/5;
-//     if (stary[i]<shigh+sdown) {
-//       star[i].style.top=stary[i]+"px";
-//       star[i].style.left=starx[i]+"px";
-//     }
-//     else {
-//       star[i].style.visibility="hidden";
-//       starv[i]=0;
-//       return;
-//     }
-//   }
-//   else {
-//     tinyv[i]=50;
-//     tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-//     tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-//     tiny[i].style.width="2px";
-//     tiny[i].style.height="2px";
-//     tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
-//     star[i].style.visibility="hidden";
-//     tiny[i].style.visibility="visible"
-//   }
-// }
-
-// function update_tiny(i) {
-//   if (--tinyv[i]==25) {
-//     tiny[i].style.width="1px";
-//     tiny[i].style.height="1px";
-//   }
-//   if (tinyv[i]) {
-//     tinyy[i]+=1+Math.random()*3;
-//     tinyx[i]+=(i%5-2)/5;
-//     if (tinyy[i]<shigh+sdown) {
-//       tiny[i].style.top=tinyy[i]+"px";
-//       tiny[i].style.left=tinyx[i]+"px";
-//     }
-//     else {
-//       tiny[i].style.visibility="hidden";
-//       tinyv[i]=0;
-//       return;
-//     }
-//   }
-//   else tiny[i].style.visibility="hidden";
-// }
-
-// document.onmousemove=mouse;
-// function mouse(e) {
-//   if (e) {
-//     y=e.pageY;
-//     x=e.pageX;
-//   }
-//   else {
-//     set_scroll();
-//     y=event.y+sdown;
-//     x=event.x+sleft;
-//   }
-// }
-
-// window.onscroll=set_scroll;
-// function set_scroll() {
-//   if (typeof(self.pageYOffset)=='number') {
-//     sdown=self.pageYOffset;
-//     sleft=self.pageXOffset;
-//   }
-//   else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-//     sdown=document.body.scrollTop;
-//     sleft=document.body.scrollLeft;
-//   }
-//   else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-//     sleft=document.documentElement.scrollLeft;
-//     sdown=document.documentElement.scrollTop;
-//   }
-//   else {
-//     sdown=0;
-//     sleft=0;
-//   }
-// }
-
-// window.onresize=set_width;
-// function set_width() {
-//   var sw_min=999999;
-//   var sh_min=999999;
-//   if (document.documentElement && document.documentElement.clientWidth) {
-//     if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-//     if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-//   }
-//   if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-//     if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-//     if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-//   }
-//   if (document.body.clientWidth) {
-//     if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-//     if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-//   }
-//   if (sw_min==999999 || sh_min==999999) {
-//     sw_min=800;
-//     sh_min=600;
-//   }
-//   swide=sw_min;
-//   shigh=sh_min;
-// }
-
-// function createDiv(height, width) {
-//   var div=document.createElement("div");
-//   div.style.position="absolute";
-//   div.style.height=height+"px";
-//   div.style.width=width+"px";
-//   div.style.overflow="hidden";
-//   return (div);
-// }
-
-// function newColour() {
-//   var c=new Array();
-//   c[0]=255;
-//   c[1]=Math.floor(Math.random()*256);
-//   c[2]=Math.floor(Math.random()*(256-c[1]/2));
-//   c.sort(function(){return (0.5 - Math.random());});
-//   return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
-// }
-// // ]]>
