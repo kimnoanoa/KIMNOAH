@@ -223,21 +223,44 @@ const modalTech = document.getElementById("modalTech");
 const closeBtn = document.querySelector(".closeBtn");
 
 // 모달 열기
+// 모달 열기
 document.querySelectorAll(".learnBtn").forEach(btn => {
   btn.addEventListener("click", () => {
     const key = btn.dataset.project;
     const data = learnData[key];
 
+    // 이전 "이미지 준비 중" 문구 제거 (중복 방지)
+    const oldMsg = document.getElementById("noImageMsg");
+    if (oldMsg) oldMsg.remove();
+
     if (data) {
       modalText.textContent = data.text;
-      modalImg.src = data.img;
       modalTitle.textContent = data.title;
       modalTech.textContent = data.tech;
+
+      // ✅ 이미지가 있으면 표시
+      if (data.img && data.img.trim() !== "") {
+        modalImg.src = data.img;
+        modalImg.style.display = "block";
+      } 
+      // 🚨 이미지가 없으면 문구 표시
+      else {
+        modalImg.style.display = "none";
+
+        const msg = document.createElement("p");
+        msg.id = "noImageMsg";
+        msg.textContent = "🖼️ 이미지 준비 중입니다.";
+        msg.style.textAlign = "center";
+        msg.style.fontSize = "16px";
+        msg.style.color = "#555";
+        msg.style.margin = "15px 0";
+        modalText.parentNode.insertBefore(msg, modalText);
+      }
     } else {
       modalText.textContent = "배운 점이 아직 추가되지 않았습니다.";
-      modalImg.src = "";
       modalTitle.textContent = "";
       modalTech.textContent = "";
+      modalImg.style.display = "none";
     }
 
     modal.style.display = "block";
@@ -245,8 +268,18 @@ document.querySelectorAll(".learnBtn").forEach(btn => {
 });
 
 // 닫기
-closeBtn.onclick = () => (modal.style.display = "none");
-window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+  const oldMsg = document.getElementById("noImageMsg");
+  if (oldMsg) oldMsg.remove();
+};
+window.onclick = (e) => { 
+  if (e.target === modal) {
+    modal.style.display = "none";
+    const oldMsg = document.getElementById("noImageMsg");
+    if (oldMsg) oldMsg.remove();
+  }
+};
 
 
 
