@@ -577,7 +577,7 @@ nav.nav a {
 /* ✅ skill 전체 영역 중앙 정렬 */
 .skillDiv {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1700px;
   margin: 0 auto;
   border-radius: 12px;
   box-sizing: border-box;
@@ -602,7 +602,7 @@ nav.nav a {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
