@@ -28,7 +28,7 @@ html {
   background-color: #efeded;
   /* scroll-snap-type: y mandatory;
       scroll-behavior: auto; */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* overflow-y: scroll; ✅ 반드시 있어야 함 */
   /* scroll-padding-top: 0px; */
 }
@@ -400,7 +400,7 @@ nav.nav a {
   /* 4개 보여주기 */
   /* 기존 스타일 유지 */
   height: 780px;
-  width: 280px;
+  width: 220px;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 20px;

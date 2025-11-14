@@ -112,180 +112,226 @@
 
   </section>
 
-  <section class="page reveal reveal-left">
-
+ <section class="page reveal reveal-left">
   <div class="projectsDiv" id="projects">
-  <h2 class="subTitle">PROJECTS</h2>
-  <div class="projectSliderWrapper">
-    <button class="slideBtn prevBtn" style="display:none;">◀</button>
-    <div class="projectContainer">
-      
-  <div class="project">
-  <a href="https://riot-tft-chatbot.onrender.com/chatbot" target="_blank" class="projectImgWrapper">
-    <img class="projectImg" src="./image/chatbot.png">
-    <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
-  </a>
-  <div class="projectExplDiv">
-    <p class="projectTitle">롤토체스 챗봇 웹사이트
-      <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
-    </p>
-    <div class="projectInfo">
-      <div><strong>기간 :</strong> 2025.10.13 ~ 2025.10.24</div>
-      <div><strong>인원 :</strong> 4명</div>
-      <div><strong>사용 기술 :</strong> HTML, CSS, JS, Python, Flask, Riot API, OPENAI API</div>
-      
-      <div class="projectDetail">
-        <p><strong>내 역할 :</strong> Python Flask 서버 구축, OpenAI API 연동, Riot API 데이터 처리 및 챗봇 UI 설계</p>
-        <p>시너지 예측 시뮬레이션 기능과 UI 설계 및 배포</p>
-        <p><strong>주요 기능 :</strong> RIOT API 를 이용한 유저 전적 검색, 시너지 예측 시뮬레이터, 챗봇 기반 팀 구성 추천</p>
-        <p>시즌이 바뀌어도 일부 로직과 JSON 데이터 수정 시 사용 가능한 챗봇</p>
+    <h2 class="subTitle">PROJECTS</h2>
+
+    <div class="projectSliderWrapper">
+      <button class="slideBtn prevBtn" style="display:none;">◀</button>
+
+      <div class="projectContainer">
+
+        <!-- 프로젝트 1 -->
+        <div class="project">
+          <a href="https://riot-tft-chatbot.onrender.com/chatbot" target="_blank" class="projectImgWrapper">
+            <img class="projectImg" src="./image/chatbot.png">
+            <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+          </a>
+          <div class="projectExplDiv">
+            <p class="projectTitle">
+              롤토체스 챗봇 웹사이트
+              <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
+            </p>
+
+            <div class="projectInfo">
+              <div><strong>기간 :</strong> 2025.10.13 ~ 2025.10.24</div>
+              <div><strong>인원 :</strong> 4명</div>
+              <div><strong>사용 기술 :</strong> HTML, CSS, JS, Python, Flask, Riot API, OPENAI API</div>
+
+              <div class="projectDetail">
+                <p><strong>내 역할 :</strong> Python Flask 서버 구축, OpenAI API 연동, Riot API 데이터 처리 및 챗봇 UI 설계</p>
+                <p>시너지 예측 시뮬레이션 기능과 UI 설계 및 배포</p>
+                <p><strong>주요 기능 :</strong> 전적 검색, 시너지 예측, 챗봇 기반 팀 구성 추천</p>
+                <p>시즌 변경에도 JSON 수정만으로 재사용 가능</p>
+              </div>
+            </div>
+
+            <button class="learnBtn" data-project="tft">프로젝트 인사이트 보기</button>
+          </div>
+        </div>
+
+        <!-- 프로젝트 2 -->
+        <div class="project">
+          <a href="https://todo-list-jet-xi.vercel.app/" target="_blank" class="projectImgWrapper">
+            <img class="projectImg" src="./image/todolist2.png">
+            <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+          </a>
+
+          <div class="projectExplDiv">
+            <p class="projectTitle">
+              To-do List
+              <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
+            </p>
+
+            <div class="projectInfo">
+              <div><strong>기간 :</strong> 2025.11.14 ~</div>
+              <div><strong>인원 :</strong> 1명 (개인 프로젝트)</div>
+              <div><strong>사용 기술 :</strong> React, Tailwind CSS</div>
+
+              <div class="projectDetail">
+                <p><strong>내 역할 :</strong> React + Tailwind UI 개발 / 모드 전환</p>
+                <p>- 컴포넌트 구조 설계</p>
+                <p>- 날짜별 Todo 그룹 및 localStorage 상태 유지</p>
+                <p>- 다크/라이트 테마</p>
+
+                <p><strong>주요 기능 :</strong></p>
+                <p>- Todo CRUD</p>
+                <p>- 날짜 자동 저장 및 그룹화</p>
+
+              </div>
+            </div>
+
+            <button class="learnBtn" data-project="todo">프로젝트 인사이트 보기</button>
+          </div>
+        </div>
+
+        <!-- 프로젝트 3 -->
+        <div class="project">
+          <a href="#" class="projectImgWrapper">
+            <img class="projectImg" src="./image/project01.png">
+            <div class="imgOverlay"><span class="overlayText">배포 준비 중</span></div>
+          </a>
+
+          <div class="projectExplDiv">
+            <p class="projectTitle">
+              방탈출 카페 예약 사이트
+              <div class="projectStatus"><span class="status-badge pending">배포 준비중</span></div>
+            </p>
+
+            <div class="projectInfo">
+              <div><strong>기간 :</strong> 2024.05 ~</div>
+              <div><strong>인원 :</strong> 4명</div>
+              <div><strong>사용 기술 :</strong> Spring Boot, Java, MySQL ,HTML, CSS, JS, REST API, KAKAO/NAVER/GOOGLE API</div>
+
+              <div class="projectDetail">
+                <p><strong>내 역할 :</strong> 예약 로직 / 결제 / DB 설계 / 반응형 UI</p>
+                <p><strong>주요 기능 :</strong> 테마 예약 / 승인 / 결제 / 게시판</p>
+                <p><strong>문제 해결 중 :</strong> 소셜 로그인</p>
+              </div>
+            </div>
+
+            <button class="learnBtn" data-project="escape">프로젝트 인사이트 보기</button>
+          </div>
+        </div>
+
+        <!-- 프로젝트 4 -->
+        <div class="project">
+          <a href="#" class="projectImgWrapper">
+            <img class="projectImg" src="./image/reactProject.png">
+            <div class="imgOverlay"><span class="overlayText">제작 중</span></div>
+          </a>
+
+          <div class="projectExplDiv">
+            <p class="projectTitle">
+              React 가구 쇼핑몰
+              <div class="projectStatus"><span class="status-badge maintaining">제작 중</span></div>
+            </p>
+
+            <div class="projectInfo">
+              <div><strong>기간 :</strong> 2025.11 ~</div>
+              <div><strong>인원 :</strong> 4명</div>
+              <div><strong>사용 기술 :</strong> React, CSS, Spring Boot, MySQL, Flask, REST API</div>
+
+              <div class="projectDetail">
+                <p><strong>내 역할 :</strong> Front + Back CRUD / UI 설계 / API 연동</p>
+                <p>페이징 / 댓글 / 좋아요 / 별점</p>
+              </div>
+            </div>
+
+            <button class="learnBtn" data-project="furniture">프로젝트 인사이트 보기</button>
+          </div>
+        </div>
+
+        <!-- 프로젝트 5 -->
+        <div class="project">
+          <a href="https://myfirstboard-f6q2.onrender.com/" target="_blank" class="projectImgWrapper">
+            <img class="projectImg" src="./image/newboard.png">
+            <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+          </a>
+
+          <div class="projectExplDiv">
+            <p class="projectTitle">
+              게시판 CRUD 웹사이트
+              <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
+            </p>
+
+            <div class="projectInfo">
+              <div><strong>기간 :</strong> 2025.07 ~</div>
+              <div><strong>인원 :</strong> 1명</div>
+              <div><strong>사용 기술 :</strong> Spring Boot, Java, PostgreSQL, Google API</div>
+
+              <div class="projectDetail">
+                <p><strong>내 역할 :</strong> CRUD + DB 설계</p>
+                <p><strong>주요 기능 :</strong> 로그인 / 게시글 등록 / 삭제 / 수정</p>
+              </div>
+            </div>
+
+            <button class="learnBtn" data-project="board">프로젝트 인사이트 보기</button>
+          </div>
+        </div>
+
+        <!-- 프로젝트 6 -->
+        <div class="project">
+          <a href="https://kimnoanoa.github.io/Burger-chicken/" target="_blank" class="projectImgWrapper">
+            <img class="projectImg" src="./image/burgerchicken.png">
+            <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+          </a>
+
+          <div class="projectExplDiv">
+            <p class="projectTitle">
+              Burger&Chicken 웹사이트
+              <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
+            </p>
+
+            <div class="projectInfo">
+              <div><strong>기간 :</strong> 2025.06</div>
+              <div><strong>인원 :</strong> 1명</div>
+              <div><strong>사용 기술 :</strong> HTML, CSS, JS</div>
+
+              <div class="projectDetail">
+                <p><strong>내 역할 :</strong> 메인/배너 UI 제작</p>
+              </div>
+            </div>
+
+            <button class="learnBtn" data-project="burger">프로젝트 인사이트 보기</button>
+          </div>
+        </div>
+
+        <!-- 프로젝트 7 -->
+        <div class="project">
+          <a href="https://kimnoanoa.github.io/HtmlProject01/" target="_blank" class="projectImgWrapper">
+            <img class="projectImg" src="./image/firsthtmlproject02.png">
+            <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
+          </a>
+
+          <div class="projectExplDiv">
+            <p class="projectTitle">
+              이개멍냥 펫샵 웹사이트
+              <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
+            </p>
+
+            <div class="projectInfo">
+              <div><strong>기간 :</strong> 2024.02</div>
+              <div><strong>인원 :</strong> 4명</div>
+              <div><strong>사용 기술 :</strong> HTML, CSS, JS</div>
+
+              <div class="projectDetail">
+                <p><strong>내 역할 :</strong> 상세 페이지 구현</p>
+              </div>
+            </div>
+
+            <button class="learnBtn" data-project="pet">프로젝트 인사이트 보기</button>
+          </div>
+        </div>
+
       </div>
-      
-      <button class="learnBtn" data-project="tft">프로젝트 인사이트 보기</button>
+
+      <button class="slideBtn nextBtn" style="display:none;">▶</button>
     </div>
   </div>
-</div>
-
-<div class="project">
-  <a href="#" class="projectImgWrapper">
-    <img class="projectImg" src="./image/project01.png">
-    <div class="imgOverlay"><span class="overlayText">배포 준비 중</span></div>
-  </a>
-  <div class="projectExplDiv">
-    <p class="projectTitle">방탈출카페 예약 사이트
-      <div class="projectStatus"><span class="status-badge pending">배포 준비중</span></div>
-    </p>
-    <div class="projectInfo">
-      <div><strong>기간 :</strong> 2024.05 ~ (현재 문제 해결 중)</div>
-      <div><strong>인원 :</strong> 4명</div>
-      <div><strong>사용 기술 :</strong> Spring Boot, Java, MySQL ,HTML, CSS, JavaScript, REST API, KAKAO API , Naver API, Google API, Thymeleaf</div>
-      
-      <div class="projectDetail">
-        <p><strong>내 역할 :</strong> 백엔드(Spring Boot) 예약 로직 구현 및 DB 설계, 결제 연동</p>
-        <p>전반적인 프론트엔드 UI,UX 설계와 반응형 웹 구현</p>
-        <p><strong>주요 기능 :</strong> 테마별 예약, 관리자 승인, 결제 시스템, 예약 현황 조회 기능 , 게시판 기능</p>
-        <p><strong>해결 중 :</strong> 카카오,네이버,구글 소셜로그인 연동이 되지 않아 문제 해결 중.</p>
-      </div>
-      
-      <button class="learnBtn" data-project="escape">프로젝트 인사이트 보기</button>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <a href="#"  class="projectImgWrapper">
-    <img class="projectImg" src="./image/reactProject.png">
-    <div class="imgOverlay"><span class="overlayText">제작 중</span></div>
-  </a>
-  <div class="projectExplDiv">
-    <p class="projectTitle"> React 를 활용한 가구 쇼핑 사이트
-      <div class="projectStatus"><span class="status-badge maintaining">제작 중</span></div>
-    </p>
-    <div class="projectInfo">
-      <div><strong>기간 :</strong> 2025.11 ~</div>
-      <div><strong>인원 :</strong> 4명</div>
-      <div><strong>사용 기술 :</strong> React, Css , Java , Spring Boot , Python , Flask , PostMan , REST API, MySQL </div>
-      
-      <div class="projectDetail">
-        <p><strong>내 역할 :</strong> React 를 활용한 프론트엔드 설계 및 스프링 백엔드 CRUD 개발, 프론트 UI와  백엔드 연결</p>
-        <p>페이징 기능, 댓글 기능, 좋아요 기능, 별점 기능 </p>
-        <p>ERD설계 및 관리, 배포</p>
-        <p><strong>주요 기능 :</strong> 가구 쇼핑, 검색 기능, 배너 이벤트 </p>
-        <p><strong>추가 예정 :</strong> 장바구니 기능, 결제,  로그인 기능</p>
-      </div>
-      
-      <button class="learnBtn" data-project="firstReact">프로젝트 인사이트 보기</button>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <a href="https://myfirstboard-f6q2.onrender.com/" target="_blank" class="projectImgWrapper">
-    <img class="projectImg" src="./image/newboard.png">
-    <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
-  </a>
-  <div class="projectExplDiv">
-    <p class="projectTitle">게시판 CRUD 웹사이트
-      <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
-    </p>
-    <div class="projectInfo">
-      <div><strong>기간 :</strong> 2025.07 ~</div>
-      <div><strong>인원 :</strong> 1명</div>
-      <div><strong>사용 기술 :</strong> Spring Boot, Java, HTML, CSS, JavaScript, PostgreSQL, Google API</div>
-      
-      <div class="projectDetail">
-        <p><strong>내 역할 :</strong> 백엔드(Spring Boot) CRUD 기능 구현 및 DB 설계 </p>
-        <p><strong>주요 기능 :</strong> 회원가입 / 로그인, 게시글 등록 / 수정 / 삭제, Google 로그인 연동</p>
-        <p><strong>추가 예정 :</strong> 카카오, 네이버 로그인 연동, 댓글 기능과 좋아요 기능, 전체적인 UI,UX</p>
-      </div>
-      
-      <button class="learnBtn" data-project="board">프로젝트 인사이트 보기</button>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <a href="https://kimnoanoa.github.io/Burger-chicken/" target="_blank" class="projectImgWrapper">
-    <img class="projectImg" src="./image/burgerchicken.png">
-    <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
-  </a>
-  <div class="projectExplDiv">
-    <p class="projectTitle">Burger&Chicken HTML 웹사이트
-      <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div>
-    </p>
-    <div class="projectInfo">
-      <div><strong>기간 :</strong> 2025.06</div>
-      <div><strong>인원 :</strong> 1명</div>
-      <div><strong>사용 기술 :</strong> HTML, CSS, JS</div>
-      
-      <div class="projectDetail">
-        <p><strong>내 역할 :</strong> HTML, CSS, JS 프론트엔드 구현</p>
-        <p><strong>주요 기능 :</strong> 메뉴 카테고리, 슬라이드 배너  UI 구현</p>
-      </div>
-      
-      <button class="learnBtn" data-project="burger">프로젝트 인사이트 보기</button>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <a href="https://kimnoanoa.github.io/HtmlProject01/" target="_blank" class="projectImgWrapper">
-    <img class="projectImg" src="./image/firsthtmlproject02.png">
-    <div class="imgOverlay"><span class="overlayText">자세히 보러가기</span></div>
-  </a>
-  <div class="projectExplDiv">
-    <p class="projectTitle">이개멍냥 펫샵 HTML 웹사이트
-      <div class="projectStatus"><span class="status-badge deployed">배포 완료</span></div></p>
-    
-    <div class="projectInfo">
-      <div><strong>기간 :</strong> 2024.02</div>
-      <div><strong>인원 :</strong> 4명</div>
-      <div><strong>사용 기술 :</strong> HTML, CSS, JS</div>
-      
-      <div class="projectDetail">
-        <p><strong>내 역할 :</strong> 상세 페이지 구현</p>
-        <p><strong>주요 기능 :</strong> 메인 페이지, 상세 페이지, 로그인 화면</p>
-      </div>
-      
-      <button class="learnBtn" data-project="pet">프로젝트 인사이트 보기</button>
-    </div>
-  </div>
-</div>
+</section>
 
 
-    
-      <!-- 추가 project들 -->
-    </div>
-    <button class="slideBtn nextBtn" style="display:none;">▶</button>
-  </div>
-</div>
-
-  
-  </div>
-  </div>
- 
-
-  </section>
   <section class="page reveal reveal-left">
   <div class="eduDiv" id="education">
   <h2 class="subTitle">EDUCATION</h2>
