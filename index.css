@@ -374,9 +374,12 @@ nav.nav a {
   margin: 10px 0;
   font-size: 1rem;
   color: #333;
-  line-height: 1.6;
+  /* line-height: 1.6; */
 }
-
+.educationBox p,
+.educationBox strong {
+  border-bottom: none !important;
+}
 
 
 .projectSliderWrapper {
@@ -714,9 +717,9 @@ nav.nav a {
   text-decoration: none;
 }
 
-.contactCard a.contactValue:hover {
+/* .contactCard a.contactValue:hover {
   text-decoration: underline;
-}
+} */
 
 /* Resume button */
 .resumeDownloadWrapper {
