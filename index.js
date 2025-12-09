@@ -111,6 +111,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const learnData = {
+furniture: {
+  title: "RoomMind 가구 쇼핑몰 웹사이트",
+  tech: "React, JavaScript, CSS, Tailwind, Java, Spring Boot, MyBatis, MySQL, REST API, AWS(예정), OpenAI Chatbot",
+  img: "./image/roommind.png",
+  text: `
+이번 프로젝트에서는 FrontEnd와 BackEnd를 모두 직접 설계하고 구현하면서,
+웹 서비스가 실제로 어떻게 구성되고 운영되는지 전체 흐름을 깊이 있게 이해할 수 있었습니다.
+
+React로 메인 페이지·상품 목록·상세·마이페이지·장바구니·결제 플로우·관리자 페이지까지
+서비스 전반의 UI를 구현하면서 컴포넌트 설계, 상태 관리, 라우팅 구조에 대한 감각을 확실히 익혔습니다.
+특히 백엔드에서 제공하는 REST API들과 연동하면서,
+비동기 데이터 처리, 에러 핸들링, JWT 인증 흐름을 자연스럽게 체득할 수 있었습니다.
+
+백엔드에서는 Spring Boot와 MyBatis를 사용해
+카테고리·상품·회원·주문·문의 등 핵심 도메인의 CRUD 기능을 직접 구축하고,
+ERD 설계부터 DB 연동, 관리자 백오피스 기능 개발까지 전반적인 서버 구조를 경험했습니다.
+이 과정에서 서비스 운영에 필요한 도메인 모델링과 API 설계의 중요성을 깊게 느낄 수 있었습니다.
+
+또한 OpenAI API를 활용한 상품 추천 챗봇을 연동하면서,
+프론트엔드에서 챗 UI를 만들고 백엔드와 연동해 답변을 처리하는 흐름을 구축했습니다.
+이 과정에서 외부 API 연결, 프롬프트 설계, 응답 처리 방식 등
+실제 서비스에 기능을 녹여내는 전반적인 연동 경험을 쌓을 수 있었습니다.
+
+마지막으로 프로젝트 운영을 총괄하면서
+배포 구조(AWS EC2/S3/RDS), 이미지 업로드 경로 관리, 환경 변수 분리,
+실제 사용자 시나리오 중심의 기능 점검 등 실무와 가까운 경험을 할 수 있었습니다.
+단순한 기능 구현을 넘어 ‘서비스를 완성도 있게 만들고 유지하는 관점’을 배우게 된 프로젝트였습니다.
+  `
+},
+
+  
   tft: {
     title: "롤토체스 챗봇 웹사이트",
     tech: "HTML, CSS, JS, Python, Flask, Riot API, OpenAI API",
